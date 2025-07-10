@@ -1,24 +1,30 @@
 {
-  "name": "my-turborepo-playground",
-  "private": true,
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "check-types": "turbo run check-types"
-  },
-  "devDependencies": {
-    "prettier": "^3.6.2",
-    "turbo": "^2.5.4",
-    "typescript": "5.8.3"
-  },
-  "engines": {
-    "node": ">=18"
-  },
-  "packageManager": "bun@1.2.18",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+	"name": "my-turborepo-playground",
+	"private": true,
+	"scripts": {
+		"prepare": "lefthook install",
+		"preinstall": "npx only-allow bun",
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"format:root": "biome format --write . && prettier --write . --ignore-path .prettierignore",
+		"format": "turbo run format",
+		"lint": "turbo run lint",
+		"check": "turbo run check --continue",
+		"check-types": "turbo run check-types"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.1.1",
+		"lefthook": "^1.12.1",
+		"prettier": "^3.6.2",
+		"turbo": "^2.5.4",
+		"typescript": "5.8.3"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"packageManager": "bun@1.2.18",
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	]
 }

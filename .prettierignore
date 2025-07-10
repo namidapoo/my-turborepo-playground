@@ -1,0 +1,15 @@
+# Biomeが処理する拡張子
+**/*.js
+**/*.jsx
+**/*.ts
+**/*.tsx
+**/*.json
+**/*.jsonc
+**/*.css
+
+# ビルド成果物
+dist/
+build/
+.next/
+.turbo/
+node_modules/
