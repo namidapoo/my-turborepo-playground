@@ -1,0 +1,25 @@
+import { sharedConfig } from "@repo/vitest-config";
+import { defineConfig } from "vitest/config";
+
+export default defineConfig({
+	...sharedConfig,
+	projects: [
+		{
+			name: "packages",
+			root: "./packages/*",
+			test: {
+				...sharedConfig.test,
+				// Project-specific configuration
+			},
+		},
+		{
+			name: "apps",
+			root: "./apps/*",
+			test: {
+				...sharedConfig.test,
+				// Project-specific configuration
+				environment: "jsdom",
+			},
+		},
+	],
+});

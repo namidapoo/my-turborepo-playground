@@ -11,7 +11,9 @@
 		"format": "bun run format:biome && bun run format:prettier",
 		"lint": "biome lint .",
 		"lint:fix": "biome lint --write .",
-		"check": "biome check --write . && bun run format:prettier"
+		"check": "biome check --write . && bun run format:prettier",
+		"test": "vitest run",
+		"test:watch": "vitest --watch"
 	},
 	"dependencies": {
 		"@repo/ui": "*",
@@ -21,11 +23,13 @@
 	},
 	"devDependencies": {
 		"@repo/typescript-config": "*",
-		"typescript": "^5",
+		"@tailwindcss/postcss": "^4",
 		"@types/node": "^20",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
-		"@tailwindcss/postcss": "^4",
-		"tailwindcss": "^4"
+		"@vitest/coverage-istanbul": "^3.2.4",
+		"tailwindcss": "^4",
+		"typescript": "^5",
+		"vitest": "^3.2.4"
 	}
 }
