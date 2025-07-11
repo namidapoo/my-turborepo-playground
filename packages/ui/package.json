@@ -13,14 +13,21 @@
 		"lint:fix": "biome lint --write .",
 		"check": "biome check --write . && bun run format:prettier",
 		"generate:component": "turbo gen react-component",
-		"check-types": "tsc --noEmit"
+		"check-types": "tsc --noEmit",
+		"test": "vitest run",
+		"test:watch": "vitest --watch"
 	},
 	"devDependencies": {
 		"@repo/typescript-config": "*",
+		"@repo/vitest-config": "workspace:*",
 		"@types/node": "^22.15.3",
 		"@types/react": "19.1.0",
 		"@types/react-dom": "19.1.1",
-		"typescript": "5.8.2"
+		"@testing-library/react": "latest",
+		"@testing-library/jest-dom": "latest",
+		"jsdom": "latest",
+		"typescript": "5.8.2",
+		"vitest": "latest"
 	},
 	"dependencies": {
 		"react": "^19.1.0",

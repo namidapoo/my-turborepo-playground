@@ -10,14 +10,22 @@
 		"format": "turbo run format",
 		"lint": "turbo run lint",
 		"check": "turbo run check --continue",
-		"check-types": "turbo run check-types"
+		"check-types": "turbo run check-types",
+		"test": "turbo run test",
+		"test:watch": "turbo run test:watch",
+		"test:projects": "vitest run",
+		"test:projects:watch": "vitest --watch",
+		"test:coverage": "bun run test && bun run merge-coverage",
+		"merge-coverage": "node scripts/merge-coverage.js"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.1.1",
 		"lefthook": "^1.12.1",
+		"nyc": "latest",
 		"prettier": "^3.6.2",
 		"turbo": "^2.5.4",
-		"typescript": "5.8.3"
+		"typescript": "5.8.3",
+		"vitest": "latest"
 	},
 	"engines": {
 		"node": ">=18"
