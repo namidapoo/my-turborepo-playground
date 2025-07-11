@@ -9,13 +9,18 @@
 		"lint": "biome lint .",
 		"lint:fix": "biome lint --write .",
 		"check": "biome check --write . && bun run format:prettier",
-		"cf-typegen": "wrangler types --env-interface CloudflareBindings"
+		"cf-typegen": "wrangler types --env-interface CloudflareBindings",
+		"test": "vitest run",
+		"test:watch": "vitest --watch"
 	},
 	"dependencies": {
 		"hono": "^4.8.4"
 	},
 	"devDependencies": {
 		"@repo/typescript-config": "*",
+		"@repo/vitest-config": "*",
+		"@vitest/coverage-istanbul": "^3.2.4",
+		"vitest": "^3.2.4",
 		"wrangler": "^4.4.0"
 	}
 }
