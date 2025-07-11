@@ -15,12 +15,13 @@
 		"test:watch": "turbo run test:watch"
 	},
 	"devDependencies": {
-		"@repo/vitest-config": "*",
 		"@biomejs/biome": "2.1.1",
+		"@repo/vitest-config": "*",
 		"lefthook": "^1.12.1",
 		"prettier": "^3.6.2",
 		"turbo": "^2.5.4",
-		"typescript": "5.8.3"
+		"typescript": "5.8.3",
+		"vitest": "^3.2.4"
 	},
 	"engines": {
 		"node": ">=18"
